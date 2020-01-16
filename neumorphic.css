@@ -1,0 +1,105 @@
+body{
+    background-color:#E0E5EC!important;
+}
+
+* {
+  font-family: Montserrat, "SF Display", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+*:focus {
+  outline: none!important;
+}
+
+@media screen
+and (min-width : 300px)
+and (max-width : 675px) {
+
+  .form-inline {
+    width: 100%!important;
+  }
+
+  .form-control {
+    width: 65%!important;
+  }
+
+}
+
+.box{
+  margin: auto;
+  margin-right: auto;
+  margin-top:100px;
+  border-radius:35%;
+  width:150px;
+  height:150px;
+}
+
+.neo {
+  /*background-color:#E0E5EC;*/
+  background-image: linear-gradient(145deg, #f0f5fd, #caced4);
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(245, 245, 245, 0.338), 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px    rgba(255,255,255, 0.5);
+  color: #878787;
+  font-size: 32px;
+  line-height: 144px;
+  text-decoration: none;
+  margin: 36px;
+  position: relative;
+  width: 144px;
+  height: 144px;
+}
+
+.neo:hover {
+  background-image: linear-gradient(145deg, #f0f5fd, rgb(217, 221, 226));
+  text-decoration: none;
+}
+.neo:active {
+  background-image: linear-gradient(145deg, #caced4, #f0f5fd);
+  text-decoration: none;
+}
+
+.neobox {
+  background-color:#E0E5EC;
+  box-shadow: 0 3px 8px rgba(245, 245, 245, 0.338), 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px    rgba(255,255,255, 0.5);
+  color: #878787;
+  border: none;
+}
+
+.neobox:hover {
+  background-image: linear-gradient(145deg, #f0f5fd, rgb(217, 221, 226));
+}
+
+.neobox:focus {
+  background-image: linear-gradient(145deg, #caced4, #f0f5fd);
+}
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flexed {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marginer{
+  margin:auto;
+}
+
+.responsive {
+  height: auto!important;
+  width: 100%!important;
+}
