@@ -2,99 +2,171 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Neumorphic</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="neumorphic.css" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphic</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="neumorphic.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/brands.css"
+        integrity="sha384-ouytoyjvzHVJu1m+KEtJ+2Ys+WFsXUlknprEuQAUs62XNn0shj9U2QeTwdJQmPR1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/fontawesome.css"
+        integrity="sha384-VoScp22LWX8GkkUAmdkkkj+rz+/r84lmCD6FALIryJxjwBSz6kE6oebSlamQx19e" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-
-	<section>
-		<div class="container" id="title">
-			<div class="col-lg-6">
-				<h1 class="mt-5 neotext">Neumorphism</h1>
-				<h5 class="neotext">Skeumorphism. But newer.</h6>
-			</div>
-		</div>
-		<div class="container" id="home">
-			<div class="row">
-				<div class="col text-center">
-					<img class="responsive" src="keyboard.png">
-				</div>
-			</div>
-			<div class="row flexed">
-				<div class="col flexed text-center">
-					<a href="#" ontouchstart="" class="neo">Soft</a>
-				</div>
-				<div class="col flexed text-center">
-					<a href="#" ontouchstart="" class="neo amount">
-						<!--canvas id="circle" class="spinner"><h6>Hi</h6></!--canvas-->
-						<div class="d-flex flex-column h-100 align-items-center flexed">
-							<div class="p-1">
-								<h5>From</h5>
-							</div>
-							<div class="p-0">
-								<h3 class="colored">$699</h3>
-							</div>
-						</div>
-						<svg viewbox="0 0 100 100">
-							<linearGradient id="Gray" x1="0" y1="1" x2="1" y2="0">
-								<stop offset="0%" stop-color="gray"></stop>
-								<stop offset="100%" stop-color="lightgray"></stop>
-							</linearGradient>
-							<linearGradient id="Green" x1="0" y1="1" x2="1" y2="0">
-								<stop offset="0%" stop-color="#77e371"></stop>
-								<stop offset="100%" stop-color="#40d6a5"></stop>
-							</linearGradient>
-							<linearGradient id="GreenHover" x1="0" y1="1" x2="1" y2="0">
-								<stop offset="0%" stop-color="#77e371"></stop>
-								<stop offset="100%" stop-color="#40d6a5"></stop>
-							</linearGradient>
-							<path class="outer" d="M40,90
+    <section>
+        <div class="container neotext" id="title">
+            <div class="col-lg-6">
+                <h1 class="mt-5">Neumorphic</h1>
+                <h5>Skeumorphism. But newer.</h6>
+            </div>
+        </div>
+        <div id="home" class="collapse show">
+            <div class="container ease">
+                <div class="row">
+                    <div class="col text-center">
+                        <img class="responsive" src="keyboard.png">
+                    </div>
+                </div>
+                <div class="row flexed">
+                    <div class="col flexed text-center">
+                        <a href="#" ontouchstart="" class="neo">Soft</a>
+                    </div>
+                    <div class="col flexed text-center">
+                        <a href="#" ontouchstart="" onclick="pay()" class="neo amount">
+                            <div class="d-flex flex-column h-100 align-items-center flexed">
+                                <div class="p-0">
+                                    <h5 class="mt-2">Just</h5>
+                                </div>
+                                <div class="p-0">
+                                    <h3 class="colored">$699</h3>
+                                </div>
+                            </div>
+                            <svg viewbox="0 0 100 100">
+                                <linearGradient id="Gray" x1="0" y1="1" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="gray"></stop>
+                                    <stop offset="100%" stop-color="lightgray"></stop>
+                                </linearGradient>
+                                <linearGradient id="Green" x1="0" y1="1" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#77e371"></stop>
+                                    <stop offset="100%" stop-color="#40d6a5"></stop>
+                                </linearGradient>
+                                <linearGradient id="GreenHover" x1="0" y1="1" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#77e371"></stop>
+                                    <stop offset="100%" stop-color="#61e3b8"></stop>
+                                </linearGradient>
+                                <path class="outer" d="M40,90
 							A40,40 0 1,1 60,90" />
-							<path class="inner" d="M40,90
+                                <path class="inner" id="inner" d="M40,90
 							A40,40 0 1,1 60,90" />
-						</svg>
-					</a>
-				</div>
-			</div>
-			<div class="row flexed">
-				<div class="card inner m-3">
-					<div class="card-body m-3">
-						<h5 class="card-title">Product readiness</h5>
-						<h6 class="card-subtitle mb-2 text-muted">Expected to ship in January</h6>
-						<div class="loading my-3">
-							<div class="loading-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
-								aria-valuemin="0" aria-valuemax="100">50%</div>
-						</div>
-						<p class="card-text">We are currently under production phase. We will be able to ship our new
-							product sooner than you expected (aka January)!</p>
-						<a href="#" class="card-link">Preorder now</a>
-						<a href="#" class="card-link">Check the specs</a>
-					</div>
-				</div>
-			</div>
-			<div class="row w-100 justify-content-end mb-3">
-				<form class="form-inline my-2 background">
-					<input class="form-control mr-sm-2 neobox" type="search" placeholder="Type here"
-						aria-label="Type here">
-					<button class="btn my-2 my-sm-0 font-weight-bold" type="submit">Search</button>
-				</form>
-			</div>
-		</div>
-	</section>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="row flexed">
+                    <div class="card hollow m-3">
+                        <div class="card-body m-3">
+                            <h5 class="card-title">Product readiness</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Expected to ship in January</h6>
+                            <div class="loading my-3 noselect">
+                                <div class="loading-bar" role="progressbar" style="width: 53%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                            <p class="card-text">We are currently under production phase. We will be able to ship our
+                                new
+                                product sooner than you expected (aka January)!</p>
+                            <a href="#" class="card-link">Preorder now</a>
+                            <a href="#" class="card-link">Check the specs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                    <form class="form-inline my-2">
+                        <input class="form-control mr-sm-2 neobox" type="search" placeholder="Type here"
+                            aria-label="Type here">
+                        <button class="btn my-2 my-sm-0 font-weight-bold" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="pay" class="collapse">
+            <div class="container ease text-center mt-5">
+                <h2>Pay with ease</h2>
+                <div class="row flexed">
+                    <div class="credit card m-3 ease">
+                        <div class="card-body m-3">
+                            <h3 class="company">VISA</h3>
+                            <div class="vertical">
+                                <h2 class="digitcode">4500 **** **** 0000</h2>
+                                <div class="row justify-content-center align-items-center">
+                                    <h6 class="valid">Valid:</h6>
+                                    <h5 class="expiry">01/2030</h5>
+                                </div>
+                            </div>
+                            <h6 class="owner">IVAN CRISTINA</h6>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-center my-3">
+                    <h5>Preorder now, and you will get the cheapest guaranteed price!</h4>
+                        <h3 class="pt-4">Accepted payments</h3class="py-2">
+                            <h5 class="py-2">We support a wide variety of payments methods!</h5>
+                </div>
+                <div class="row flexed text-center mt-3 mb-5">
+                    <div class="box neobox">
+                        <i class="fab fa-amazon-pay"></i>
+                    </div>
+                    <div class="box neobox">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <div class="box neobox">
+                        <i class="fab fa-apple-pay"></i>
+                    </div>
+                    <div class="box neobox">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="box neobox">
+                        <i class="fab fa-alipay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer font-small bg-light page-footer">
+        <div class="container text-center">
+            <div class="row flexed">
+                <div class="col flexed text-center">
+                    <button id="section1" class="neofooter neofooteractive" onclick="home()">Home</a>
+                </div>
+                <div class="col flexed text-center">
+                    <button id="section2" class="neofooter" onclick="pay()">Pay</a>
+                </div>
+                <div class="col flexed text-center">
+                    <button id="section3" class="neofooter" onclick="info()">Info</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://ivancristina.github.io/"> Ivan Cristina</a>
+        </div>
+    </footer>
+
+    <script src="neumorphic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
