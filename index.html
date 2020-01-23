@@ -8,21 +8,34 @@
     <title>Neumorphic</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="neumorphic.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/brands.css"
-        integrity="sha384-ouytoyjvzHVJu1m+KEtJ+2Ys+WFsXUlknprEuQAUs62XNn0shj9U2QeTwdJQmPR1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/fontawesome.css"
-        integrity="sha384-VoScp22LWX8GkkUAmdkkkj+rz+/r84lmCD6FALIryJxjwBSz6kE6oebSlamQx19e" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <section>
-        <div class="container neotext" id="title">
-            <div class="col-lg-6">
-                <h1 class="mt-5">Neumorphic</h1>
-                <h5>Skeumorphism. But newer.</h6>
+    <nav class="navbar justify-content-end">
+        <div class="nav-item dropdown">
+            <a class="navbar-brand dropdown-toggle nooutline" href="#" id="navbarDropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="avatar" src="https://ivancristina.github.io/img/avatar-ivan.jpg"
+                    class="d-inline-block align-top" alt="">
+                Hi, Ivan
+            </a>
+            <div class="dropdown-menu background py-0" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item list my-2" href="#">Login</a>
+                <a class="dropdown-item list my-2" href="#">Settings</a>
+                <a class="dropdown-item list my-2" href="#">Exit</a>
             </div>
+        </div>
+        <div class="neonavicon neobox">
+            <i class="fas fa-envelope"></i>
+            <span class="badge">3</span>
+        </div>
+    </nav>
+    <section>
+        <div id="title" class="container neotext mt-3">
+            <h1>Neumorphic</h1>
+            <h5>Skeumorphism. But newer.</h6>
         </div>
         <div id="home" class="collapse show">
             <div class="container ease">
@@ -32,7 +45,7 @@
                     </div>
                 </div>
                 <div class="row flexed">
-                    <div class="col flexed text-center">
+                    <div class="col flexed text-center pb-5 pt-4">
                         <a href="#" ontouchstart="" class="neo">Soft</a>
                     </div>
                     <div class="col flexed text-center">
@@ -78,14 +91,14 @@
                             <p class="card-text">We are currently under production phase. We will be able to ship our
                                 new
                                 product sooner than you expected (aka January)!</p>
-                            <a href="#" class="card-link">Preorder now</a>
-                            <a href="#" class="card-link">Check the specs</a>
+                            <a href="#" class="card-link" onclick="pay()">Preorder now</a>
+                            <a href="#" class="card-link" onclick="info()">Check the specs</a>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center mb-3">
+                <div class="row justify-content-center mb-4">
                     <form class="form-inline my-2">
-                        <input class="form-control mr-sm-2 neobox" type="search" placeholder="Type here"
+                        <input class="form-control mr-sm-2 neobox mx-2 mt-2" type="search" placeholder="Type here"
                             aria-label="Type here">
                         <button class="btn my-2 my-sm-0 font-weight-bold" type="submit">Search</button>
                     </form>
@@ -93,8 +106,8 @@
             </div>
         </div>
         <div id="pay" class="collapse">
-            <div class="container ease text-center mt-5">
-                <h2>Pay with ease</h2>
+            <div class="container ease text-center">
+                <h2 class="pt-4 pb-1">Pay with ease</h2>
                 <div class="row flexed">
                     <div class="credit card m-3 ease">
                         <div class="card-body m-3">
@@ -107,13 +120,12 @@
                                 </div>
                             </div>
                             <h6 class="owner">IVAN CRISTINA</h6>
-
                         </div>
                     </div>
                 </div>
                 <div class="justify-content-center my-3">
                     <h5>Preorder now, and you will get the cheapest guaranteed price!</h4>
-                        <h3 class="pt-4">Accepted payments</h3class="py-2">
+                        <h3 class="pt-3">Accepted payments</h3">
                             <h5 class="py-2">We support a wide variety of payments methods!</h5>
                 </div>
                 <div class="row flexed text-center mt-3 mb-5">
@@ -135,11 +147,38 @@
                 </div>
             </div>
         </div>
+        <div id="info" class="collapse">
+            <div class="container ease mb-5">
+                <h2 class="pt-4">Top Quality</h2>
+                <h5 class="pt-2">The finest materials and engineering process.</h4>
+                    <h3 class="pt-4">Specifications</h3>
+                        <h5 class="py-2">Packing the latest and greatest technology, like:</h5>
+                        <dl class="row">
+                            <dt class="col-sm-3">CPU</dt>
+                            <dd class="col-sm-9">In-house developed ARM CPU for smooth and power-efficient operations.
+                            </dd>
+                            <dt class="col-sm-3 text-truncate">Battery & Ext. Charging</dt>
+                            <dd class="col-sm-9">30000mAh internal battery for extended use and even capable of
+                                supplying 5V/3A Max Output for your devices.</dd>
+                            <dt class="col-sm-3">Materials</dt>
+                            <dd class="col-sm-9">Soft touch durable materials for a super comfortable feeling.</dd>
+                            <dt class="col-sm-3">Software</dt>
+                            <dd class="col-sm-9">Minimal but powerful OS, offering you all the functions you need, but
+                                without gimmicks.</dd>
+                            <dt class="col-sm-3">Compatibility</dt>
+                            <dd class="col-sm-9">Open Source drivers for the best compatibility. Currently working with
+                                Windows, macOS, Linux, iOS & Android.</dd>
+                            <dt class="col-sm-3">Connectivity</dt>
+                            <dd class="col-sm-9">Works over WiFi (even 5Ghz), Bluetooth 5.0 LE, USB Type C and even
+                                Lightning. Easy parining process with QR or NFC.</dd>
+                        </dl>
+            </div>
+        </div>
     </section>
 
     <footer class="page-footer font-small bg-light page-footer">
         <div class="container text-center">
-            <div class="row flexed">
+            <div class="row flexed py-4">
                 <div class="col flexed text-center">
                     <button id="section1" class="neofooter neofooteractive" onclick="home()">Home</a>
                 </div>
@@ -158,6 +197,7 @@
     </footer>
 
     <script src="neumorphic.js"></script>
+    <script src="https://kit.fontawesome.com/b1493e94a6.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
